@@ -22,7 +22,7 @@ If you open, the `apps/website/app/routes/home.tsx` file, you'll see a `Button` 
 
 ![rendering](./assets/rendering.png)
 
-This ugly button is coming directly from [`./packages/ui/src/button.tsx`]('packages/ui/src/button.tsx').
+This ugly button is coming directly from [`./packages/ui/src/button.tsx`](packages/ui/src/button.tsx).
 
 Note that there's no build step set. The only requirement is to have an entry point (`packages/ui/src/index.ts`) that exports the entire lib/package code so we can import, in the website, code from this package:
 
