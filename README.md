@@ -18,13 +18,13 @@ pnpm run dev
 
 The react-router app will be hosted at [http://localhost:5173/](http://localhost:5173/).
 
-If you open, the `apps/website/app/routes/home.tsx` file, you'll see a `Button` component is being imported and rendered with no error:
+If you open, the [`apps/website/app/routes/home.tsx`](apps/website/app/routes/home.tsx) file, you'll see a `Button` component is being imported and rendered with no error:
 
 ![rendering](./assets/rendering.png)
 
 This ugly button is coming directly from [`./packages/ui/src/button.tsx`](packages/ui/src/button.tsx).
 
-Note that there's no build step set. The only requirement is to have an entry point (`packages/ui/src/index.ts`) that exports the entire lib/package code so we can import, in the website, code from this package:
+Note that there's no build step set. The only requirement is to have an entry point ([packages/ui/src/index.ts](packages/ui/src/index.ts)) that exports the entire lib/package code so we can import, in the website, code from this package:
 
 ```tsx
 import { Button } from "@org/ui";
