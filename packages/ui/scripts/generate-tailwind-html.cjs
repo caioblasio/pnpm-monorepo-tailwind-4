@@ -1,7 +1,10 @@
 const fs = require("fs");
-// const generateTailwindSafelist = require("./app/ui").generateTailwindSafelist;
+const path = require("path");
+
+const outputPath = path.resolve(__dirname, "../tailwind-classes.html");
 
 const safelist = [
+  "pt-20",
   "p-0",
   "sm:p-0",
   "md:p-0",
@@ -71,7 +74,6 @@ const safelist = [
 ];
 
 // Write safelisted classes to a dummy file
-fs.writeFileSync(
-  "./app/classes.html",
-  safelist.map((cls) => `<div class="${cls}"></div>`).join("\n")
-);
+fs.writeFileSync(outputPath, `<div class="${safelist.join(" ")}"></div>`);
+
+console.log(`Generated HTML file at ${outputPath}`);

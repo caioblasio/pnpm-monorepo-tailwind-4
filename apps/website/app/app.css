@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source "../node_modules/@org/ui/src/safelist.html";
+@source "../node_modules/@org/ui/tailwind-classes.html";
 
 html,
 body {

@@ -5,11 +5,12 @@
   "type": "module",
   "main": "./src/index.ts",
   "scripts": {
+    "dev": "node ./scripts/watch-and-generate.cjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "class-variance-authority": "0.7.1",
-    "@radix-ui/react-slot": "1.1.0"
+    "@radix-ui/react-slot": "1.1.0",
+    "class-variance-authority": "0.7.1"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.1",
+    "chokidar": "4.0.3",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   }
