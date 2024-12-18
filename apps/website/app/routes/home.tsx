@@ -1,6 +1,6 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 import { Text } from "@org/ui";
+import { Box } from "@org/ui";
 
 export function meta(args: Route.MetaArgs) {
   return [
@@ -12,8 +12,9 @@ export function meta(args: Route.MetaArgs) {
 export default function Home() {
   return (
     <div className="grid w-full place-items-center">
-      <Welcome />
-      <Text>Click me :)</Text>
+      <Box pt={20}>
+        <Text>Click me :)</Text>
+      </Box>
     </div>
   );
 }
